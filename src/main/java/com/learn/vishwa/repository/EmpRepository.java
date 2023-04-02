@@ -8,13 +8,17 @@ import org.springframework.stereotype.Repository;
 
 import com.learn.vishwa.dto.EmpDto;
 import com.learn.vishwa.dto.ResponseDto;
+import com.learn.vishwa.entity.Address;
 import com.learn.vishwa.entity.EmpEntity;
+import com.learn.vishwa.entity.Role;
 
 @Repository
 public interface EmpRepository extends JpaRepository<EmpEntity, Long>{
 
+	
 	@Modifying
-	@Query(nativeQuery = true , value = "update employee e set e.name=:name, e.email=:email,e.job_role=:jobRole,e.contact_number=:contactNumber where e.id=:id")
-	public EmpEntity updateMyEntity(@Param("id") Long id,@Param("name") String name, @Param("email") String email, @Param("jobRole") String jobRole,@Param("contactNumber") String contactNumber);
+	@Query(nativeQuery = true , value = "update employee e set e.first_name=:firstName,e.emp_salary=:empSalary, e.last_name=:lastName,e.emp_role=:empRole,e.address=:address where e.id=:id")
+	public EmpEntity updateMyEntity(@Param("id") Long id,@Param("firstName") String firstName, @Param("lastName") String lastName, @Param("empRole") Role empRole, @Param("empSalary") String empSalary,@Param("address") Address address);
 
+	
 }

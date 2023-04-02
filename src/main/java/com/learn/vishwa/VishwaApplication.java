@@ -10,4 +10,5 @@ public class VishwaApplication {
 		SpringApplication.run(VishwaApplication.class, args);
 	}
 
+	
 }

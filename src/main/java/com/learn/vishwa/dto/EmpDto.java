@@ -4,43 +4,69 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 
+import com.learn.vishwa.entity.Address;
+import com.learn.vishwa.entity.Role;
+
 public class EmpDto implements Serializable{
 
 	private Long id;
-	private String name;
-	private String email;
-	private String jobRole;
-	private String contactNumber;
+	
+	private String firstName;
+	
+	private String lastName;
+	
+	private String empSalary;
+	
+	private Address address;
+	
+	private Role empRole;
+	
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getEmail() {
-		return email;
+
+	public String getLastName() {
+		return lastName;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-	public String getJobRole() {
-		return jobRole;
+
+	public Role getEmpRole() {
+		return empRole;
 	}
-	public void setJobRole(String jobRole) {
-		this.jobRole = jobRole;
+
+	public void setEmpRole(Role empRole) {
+		this.empRole = empRole;
 	}
-	public String getContactNumber() {
-		return contactNumber;
+
+	public String getEmpSalary() {
+		return empSalary;
 	}
-	public void setContactNumber(String contactNumber) {
-		this.contactNumber = contactNumber;
+
+	public void setEmpSalary(String empSalary) {
+		this.empSalary = empSalary;
 	}
-	
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	
 }

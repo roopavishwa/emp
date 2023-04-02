@@ -2,7 +2,9 @@ package com.learn.vishwa.constants;
 
 public class AppConstants {
 
-public static final String EMPLOYEE_INFO = "employee";
+	public static final String EMPLOYEE_INFO = "employee";
+	public static final String ADDRESS = "address";
+	public static final String ROLE = "role";
 	
 	public static final String EMPLOYEE_CONTROLLER = "/empolyeeController";
 	public static final String SAVE_EMPLOYEE = "/saveEmployee";
